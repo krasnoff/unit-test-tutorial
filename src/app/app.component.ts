@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  txtDegreesInFahrenheit: number;
+
+  constructor()
+  {
+    this.txtDegreesInFahrenheit = 32;
+  }
+
+  FahrenheitoCelsius(fahrenheit: number) : number
+  {
+    return (fahrenheit - 32) * 5 / 9;
+  }
 }
